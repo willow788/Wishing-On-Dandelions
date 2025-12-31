@@ -15,16 +15,16 @@ def tree(i):
     if i < 10:
         return
     else:
-        t.forward(i)
-        t.color("orange")
-        t.circle(2)
-        t.color("brown")
-        t.left(30)
-        tree(3 * i/4)
-        t.right(60)
-        tree(3 * i/4)
-        t.left(30)
-        t.backward(i)
+        t.forward(i)     #move t pointer forward
+        t.color("orange") # colour of t is orange
+        t.circle(2)       #draw the leaf or flower petal or whatever 
+        t.color("brown")  #change the t color to brown for a woody appearance
+        t.left(30)        #move the pointer to left by 30 degree
+        tree(3 * i/4)     #draw a smaller branch
+        t.right(60)       #move right by 60 degree
+        tree(3 * i/4)    #draw smaller branch again
+        t.left(30)       #back to orginal position
+        t.backward(i)    #otherwise you will run away
 
 tree(100)
 turtle.done()
